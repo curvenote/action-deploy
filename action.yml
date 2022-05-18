@@ -1,6 +1,6 @@
 name: Curvenote Deploy
 author: Curvenote
-description: Deploy a curvenote website to surve.space hosting
+description: Deploy a Curvenote website to curve.space hosting
 branding:
   icon: "zap"
   color: "blue"
@@ -20,7 +20,7 @@ runs:
     - name: "Checkout ${{github.ref}} branch"
       uses: actions/checkout@v3
     - name: Install the curvenote cli
-      run: npm install -i curvenote
+      run: npm install -g curvenote
       shell: bash
     - name: Check curvenote version
       run: curvenote -v
