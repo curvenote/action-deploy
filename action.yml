@@ -31,7 +31,7 @@ runs:
       run: curvenote auth list
       shell: bash
     - name: Pull latest content
-      if: ${{ inputs.pull == true }}
+      if: ${{ inputs.pull == 'true' }}
       run: curvenote pull -y
       shell: bash
     - name: Deploy the site
