@@ -2,22 +2,25 @@ name: Curvenote Deploy
 author: Curvenote
 description: Deploy a Curvenote website to curve.space hosting
 branding:
-  icon: "zap"
-  color: "blue"
+  icon: 'zap'
+  color: 'blue'
 inputs:
   pull:
-    description: "pull latest changes from projects on curvenote.com during deployment"
+    description: 'pull latest changes from projects on curvenote.com during deployment'
     required: false
     default: false
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - name: Setup node
       uses: actions/setup-node@v3
       with:
         node-version: 14
-    - name: "Checkout ${{github.ref}} branch"
+    - name: 'Checkout ${{github.ref}} branch'
       uses: actions/checkout@v3
+    - name: Update NPM
+      run: npm install -g npm@latest
+      shell: bash
     - name: Install the curvenote cli
       run: npm install -g curvenote
       shell: bash
