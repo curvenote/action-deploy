@@ -10,7 +10,7 @@ Note: also consider adding the `_build/` to your `.gitignore` file, if you are t
 
 ## Basic Usage
 
-To deploy using github actions, add a new file to your repository at `.github/workflows/main.yml` containing:
+To deploy using github actions, add a new file to your repository at `.github/workflows/deploy.yml` containing:
 
 ```yaml
 name: Curvenote Deploy
@@ -28,7 +28,7 @@ jobs:
           CURVENOTE_TOKEN: ${{ secrets.CURVENOTE_TOKEN }}
 ```
 
-This requires your Curvenote API token to be saved in your GitHub secrets under `CURVENOTE_TOKEN`. See [Authorization](https://docs.curvenote.com/cli/authorization) for how to generate an API token.
+This requires your Curvenote API token to be saved in your GitHub secrets under `CURVENOTE_TOKEN`. See [Authorization](https://docs.curvenote.com/cli/authorization) for how to generate an API token. To add a secret see the [GitHub docs](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository).
 
 ### Options
 
