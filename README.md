@@ -4,7 +4,7 @@
 
 This GitHub action allows you to automate deploying a website to the `curve.space` hosting service. In order to deploy a website, the repository must have a `curvenote.yml` file at the repository root.
 
-Configure your repository using the curvenote command line tool (cli) - see [docs.curvenote.com](https://docs.curvenote.com/cli) on how to install the cli. Once installed the `curvenote init` command will collect information and create your `curvenote.yml` file, commit this to the repository and push.
+Configure your repository using the curvenote command line tool (CLI) - see [docs.curvenote.com](https://docs.curvenote.com/cli) on how to install the CLI. Once installed the `curvenote init` command will collect information and create your `curvenote.yml` file, commit this to the repository and push to GitHub.
 
 Note: also consider adding the `_build/` to your `.gitignore` file, if you are testing your website locally.
 
@@ -45,4 +45,4 @@ steps:
 
 ## Support
 
-Open an isue on this repo and we'll respond. 🚀
+Open an issue on [curvenote/action-deploy](https://github.com/curvenote/action-deploy/issues) and we'll respond. 🚀
