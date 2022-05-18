@@ -22,19 +22,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy
-      uses: actions/curvenote-deploy@v1
-      with:
-        pull: true
-      env:
-        CURVENOTE_TOKEN: ${{ secrets.CURVENOTE_TOKEN }}
+      - name: Deploy to curve.space
+        uses: actions/curvenote-deploy@v1
+        env:
+          CURVENOTE_TOKEN: ${{ secrets.CURVENOTE_TOKEN }}
 ```
 
 This requires your Curvenote API token to be saved in your GitHub secrets under `CURVENOTE_TOKEN`. See [Authorization](https://docs.curvenote.com/cli/authorization) for how to generate an API token.
 
 ### Options
 
-- `pull` (optional) when set to `true` the action will attempt to pull that latest versions of any linked projects from curvenote.com
+You can add options for the deployment using the `with` field in the action step.
+
+```yaml
+    steps:
+    - uses: actions/curvenote-deploy@v1
+      with:
+        pull: true
+```
+
+- `pull` (optional) when set to `true` the action will attempt to pull the latest versions of any linked projects from curvenote.com.
 
 ## Support
 
