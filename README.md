@@ -1,4 +1,4 @@
-# curvenote GitHub Action: Deploy
+# Curvenote GitHub Action: Deploy
 
 ## Description
 
@@ -6,14 +6,14 @@ This GitHub action allows you to automate deploying a website to the `curve.spac
 
 Configure your repository using the curvenote command line tool (cli) - see [docs.curvenote.com](https://docs.curvenote.com/cli) on how to install the cli. Once installed the `curvenote init` command will collect information and create your `curvenote.yml` file, commit this to the repository and push.
 
-Note: also consider adding the `_build/` to your `.gitignore` file, if you are testig your website locally.
+Note: also consider adding the `_build/` to your `.gitignore` file, if you are testing your website locally.
 
 ## Basic Usage
 
 To deploy using github actions, add a new file to your repository at `.github/workflows/main.yml` containing:
 
-```
-name: curvenote deploy
+```yaml
+name: Curvenote Deploy
 on:
   push:
     branches:
@@ -30,7 +30,7 @@ jobs:
         CURVENOTE_TOKEN: ${{ secrets.CURVENOTE_TOKEN }}
 ```
 
-This requires your curvenote API token to be saved in your GitHub secrets under `CURVENOTE_TOKEN`. See [Authorization](https://docs.curvenote.com/cli/authorization) for how to generate a valid API token.
+This requires your Curvenote API token to be saved in your GitHub secrets under `CURVENOTE_TOKEN`. See [Authorization](https://docs.curvenote.com/cli/authorization) for how to generate an API token.
 
 ### Options
 
@@ -38,4 +38,4 @@ This requires your curvenote API token to be saved in your GitHub secrets under 
 
 ## Support
 
-Open an isue on this repo and we'll respond.
+Open an isue on this repo and we'll respond. 🚀
