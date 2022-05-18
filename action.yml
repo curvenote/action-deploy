@@ -15,7 +15,7 @@ runs:
     - name: Setup node
       uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version: 14
     - name: "Checkout ${{github.ref}} branch"
       uses: actions/checkout@v3
     - name: Install the curvenote cli
@@ -28,7 +28,7 @@ runs:
       run: curvenote auth list
       shell: bash
     - name: Pull latest content
-      if: ${{ inputs.pull }} == true
+      if: ${{ inputs.pull == true }}
       run: curvenote pull -y
       shell: bash
     - name: Deploy the site
