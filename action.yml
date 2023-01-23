@@ -15,7 +15,7 @@ runs:
     - name: Setup node
       uses: actions/setup-node@v3
       with:
-        node-version: 14
+        node-version: 16
     - name: 'Checkout ${{github.ref}} branch'
       uses: actions/checkout@v3
     - name: Update NPM
